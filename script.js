@@ -238,3 +238,65 @@ function showQuestion(){
     });
 
 }
+function checkAnswer(
+    button,
+    selectedAnswer
+){
+
+
+    clearInterval(timer);
+
+
+    let correctAnswer =
+    quizQuestions[currentQuestion].answer;
+
+
+    let buttons =
+    document.querySelectorAll(
+        ".option-btn"
+    );
+
+
+    buttons.forEach(function(btn){
+
+
+        btn.disabled=true;
+
+
+        if(btn.innerText === correctAnswer){
+
+            btn.classList.add(
+                "correct"
+            );
+
+        }
+
+    });
+
+
+
+    if(selectedAnswer === correctAnswer){
+
+
+        score +=10;
+
+        correctAnswers++;
+
+
+    }
+    else{
+
+
+        wrongAnswers++;
+
+        button.classList.add(
+            "wrong"
+        );
+
+    }
+
+
+    updateScore();
+
+
+}
