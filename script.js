@@ -584,3 +584,68 @@ leaderboard
 
 
 }
+function displayLeaderboard(){
+
+
+let list =
+document.getElementById(
+"leaderboardList"
+);
+
+
+
+list.innerHTML="";
+
+
+
+let leaderboard =
+
+JSON.parse(
+localStorage.getItem(
+"quizLeaderboard"
+)
+)
+||
+[];
+
+
+
+leaderboard.forEach(
+function(item,index){
+
+
+let li =
+document.createElement(
+"li"
+);
+
+
+
+li.innerHTML =
+
+`
+#${index+1}
+
+Score:
+${item.score}
+
+(${item.percentage}%)
+
+${item.date}
+
+`;
+
+
+
+list.appendChild(li);
+
+
+
+});
+
+
+}
+
+
+
+displayLeaderboard();
