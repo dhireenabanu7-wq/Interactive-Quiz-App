@@ -816,3 +816,50 @@ function(event){
 
 
 });
+// ===============================
+// RESULT MESSAGE
+// ===============================
+
+
+function getMessage(
+percentage
+){
+
+
+    if(percentage >= 90){
+
+
+        return "🏆 Excellent";
+
+
+    }
+
+
+    else if(percentage >=70){
+
+
+        return "🔥 Great Job";
+
+
+    }
+
+
+    else if(percentage >=50){
+
+
+        return "👍 Good";
+
+
+    }
+
+
+    else{
+
+
+        return "📚 Keep Practicing";
+
+
+    }
+
+
+}
