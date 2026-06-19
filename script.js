@@ -1,0 +1,69 @@
+// ===============================
+// QUESTIONS DATABASE
+// ===============================
+
+const questions = [
+
+    {
+        category: "html",
+        difficulty: "easy",
+        question: "What does HTML stand for?",
+        options: [
+            "Hyper Text Markup Language",
+            "High Text Machine Language",
+            "Hyper Transfer Markup Language",
+            "Home Tool Markup Language"
+        ],
+        answer: "Hyper Text Markup Language"
+    },
+
+
+    {
+        category: "css",
+        difficulty: "easy",
+        question: "What does CSS stand for?",
+        options: [
+            "Cascading Style Sheets",
+            "Creative Style Sheets",
+            "Computer Style Sheets",
+            "Colorful Style Sheets"
+        ],
+        answer: "Cascading Style Sheets"
+    },
+
+
+    {
+        category: "js",
+        difficulty: "easy",
+        question: "What is DOM?",
+        options: [
+            "Document Object Model",
+            "Data Object Method",
+            "Dynamic Output Method",
+            "Document Output Method"
+        ],
+        answer: "Document Object Model"
+    }
+
+];
+
+
+
+// ===============================
+// QUIZ VARIABLES
+// ===============================
+
+
+let quizQuestions = [];
+
+let currentQuestion = 0;
+
+let score = 0;
+
+let correctAnswers = 0;
+
+let wrongAnswers = 0;
+
+let timer;
+
+let time = 15;
