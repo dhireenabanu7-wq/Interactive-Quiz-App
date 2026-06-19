@@ -341,3 +341,28 @@ function updateScore(){
     accuracy+"%";
 
 }
+nextBtn.addEventListener(
+    "click",
+    function(){
+
+
+        currentQuestion++;
+
+
+        if(
+        currentQuestion <
+        quizQuestions.length
+        ){
+
+            showQuestion();
+
+        }
+        else{
+
+            showResult();
+
+        }
+
+
+    }
+);
