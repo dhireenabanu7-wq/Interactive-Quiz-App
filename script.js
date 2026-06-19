@@ -506,3 +506,18 @@ function showResult(){
 
 
 }
+// ===============================
+// RESTART QUIZ
+// ===============================
+
+
+document.getElementById(
+"restartBtn"
+)
+.addEventListener(
+"click",
+function(){
+
+    location.reload();
+
+});
