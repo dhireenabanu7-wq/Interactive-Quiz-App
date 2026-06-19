@@ -226,3 +226,23 @@ background:#16a34a ;
 .wrong{
 background:#dc2626 ;
 }
+.actions{
+margin-top:25px;
+}
+
+
+#nextBtn{
+padding:14px 25px;
+border:none;
+border-radius:12px;
+background:#3b82f6;
+color:white;
+cursor:pointer;
+}
+
+
+.result-section{
+display:none;
+text-align:center;
+margin-top:40px;
+}
