@@ -67,3 +67,46 @@ let wrongAnswers = 0;
 let timer;
 
 let time = 15;
+// ===============================
+// SELECT HTML ELEMENTS
+// ===============================
+
+
+const startBtn =
+document.getElementById("startBtn");
+
+
+const nextBtn =
+document.getElementById("nextBtn");
+
+
+const questionText =
+document.getElementById("question");
+
+
+const optionsBox =
+document.getElementById("options");
+
+
+const quizBox =
+document.getElementById("quizSection");
+
+
+const resultBox =
+document.getElementById("resultSection");
+
+
+const timerText =
+document.getElementById("timer");
+
+
+const progressBar =
+document.getElementById("progressFill");
+
+
+const currentQuestionNumber =
+document.getElementById("currentQuestion");
+
+
+const totalQuestionNumber =
+document.getElementById("totalQuestions");
