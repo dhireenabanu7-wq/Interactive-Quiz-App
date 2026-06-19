@@ -24,7 +24,7 @@ This is a frontend-only project made for learning purposes.
 - Score tracking (+10 per correct answer)
 - Accuracy calculation
 - Leaderboard (Top 5 scores stored in localStorage)
-- Dark / Light mode
+- Dark / Light mode 
 - Responsive design
 
 ---
