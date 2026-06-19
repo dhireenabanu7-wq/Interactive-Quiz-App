@@ -506,3 +506,135 @@ function getMessage(percentage) {
     if (percentage >= 50) return "👍 Good";
     return "📚 Keep Practicing";
 }
+
+// ===============================
+// SHOW RESULT (FIXED)
+// ===============================
+
+function showResult() {
+
+    clearInterval(timer);
+
+    quizBox.style.display = "none";
+    resultBox.style.display = "block";
+
+    let total = quizQuestions.length;
+    let unattempted = total - (correctAnswers + wrongAnswers);
+
+    let percentage =
+        Math.round((score / (total * 10)) * 100);
+
+    document.getElementById("finalScore").innerHTML = `
+        Score: ${score}
+        <br>
+        Correct: ${correctAnswers}
+        <br>
+        Wrong: ${wrongAnswers}
+        <br>
+        Percentage: ${percentage}%
+        <br>
+        ${getMessage(percentage)}
+    `;
+
+    let circle = document.getElementById("resultCircle");
+
+    circle.innerText = percentage + "%";
+
+    let degree = percentage * 3.6;
+
+    circle.style.background = `
+        conic-gradient(
+            #22c55e ${degree}deg,
+            #1e293b ${degree}deg
+        )
+    `;
+
+    // 🏆 leaderboard fix
+    saveLeaderboard(score, percentage);
+    saveHighScore();
+    displayLeaderboard();
+
+    // 📊 PIE CHART CALL
+    renderPieChart(correctAnswers, wrongAnswers, unattempted);
+}
+
+function saveLeaderboard(score, percentage) {
+
+    let leaderboard =
+        JSON.parse(localStorage.getItem("quizLeaderboard")) || [];
+
+    leaderboard.push({
+        score,
+        percentage,
+        date: new Date().toLocaleString()
+    });
+
+    leaderboard.sort((a, b) => b.score - a.score);
+
+    leaderboard = leaderboard.slice(0, 5);
+
+    localStorage.setItem(
+        "quizLeaderboard",
+        JSON.stringify(leaderboard)
+    );
+}
+
+function displayLeaderboard() {
+
+    let list = document.getElementById("leaderboardList");
+    list.innerHTML = "";
+
+    let leaderboard =
+        JSON.parse(localStorage.getItem("quizLeaderboard")) || [];
+
+    if (leaderboard.length === 0) {
+        list.innerHTML = "<li>No scores yet 🚀</li>";
+        return;
+    }
+
+    leaderboard.forEach((item, index) => {
+
+        let li = document.createElement("li");
+
+        li.innerHTML = `
+            <strong>#${index + 1}</strong>
+            — Score: ${item.score}
+            | ${item.percentage}%
+            <br>
+            <small>${item.date}</small>
+        `;
+
+        list.appendChild(li);
+    });
+}
+
+// initial load
+displayLeaderboard();
+
+function renderPieChart(correct, wrong, unattempted) {
+
+    let total = correct + wrong + unattempted;
+
+    let correctDeg = (correct / total) * 360;
+    let wrongDeg = (wrong / total) * 360;
+    let unattemptedDeg = (unattempted / total) * 360;
+
+    document.getElementById("resultChart").innerHTML = `
+        <div class="pie-chart"></div>
+        <div class="legend">
+            <span>🟢 Correct</span>
+            <span>🔴 Wrong</span>
+            <span>⚪ Unattempted</span>
+        </div>
+    `;
+
+    let chart = document.querySelector(".pie-chart");
+
+    chart.style.background = `
+        conic-gradient(
+            #22c55e 0deg ${correctDeg}deg,
+            #ef4444 ${correctDeg}deg ${correctDeg + wrongDeg}deg,
+            #94a3b8 ${correctDeg + wrongDeg}deg 360deg
+        )
+    `;
+}
