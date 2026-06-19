@@ -758,3 +758,41 @@ function shuffleQuestions(array){
     return array;
 
 }
+// ===============================
+// HIGH SCORE
+// ===============================
+
+
+function saveHighScore(){
+
+
+    let oldScore =
+
+    localStorage.getItem(
+        "highScore"
+    );
+
+
+
+    if(oldScore === null){
+
+        oldScore = 0;
+
+    }
+
+
+
+    if(score > oldScore){
+
+
+        localStorage.setItem(
+
+            "highScore",
+
+            score
+
+        );
+
+    }
+
+}
