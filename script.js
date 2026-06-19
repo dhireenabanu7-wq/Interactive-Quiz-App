@@ -422,3 +422,87 @@ function startTimer(){
     },1000);
 
 }
+// ===============================
+// SHOW RESULT
+// ===============================
+
+
+function showResult(){
+
+
+    clearInterval(timer);
+
+
+
+    quizBox.style.display =
+    "none";
+
+
+    resultBox.style.display =
+    "block";
+
+
+
+    let percentage =
+    Math.round(
+        (score /
+        (quizQuestions.length * 10))
+        *100
+    );
+
+
+
+    document.getElementById(
+        "finalScore"
+    ).innerHTML =
+
+    `
+    Score : ${score}
+
+    <br>
+
+    Correct : ${correctAnswers}
+
+    <br>
+
+    Wrong : ${wrongAnswers}
+
+    <br>
+
+    Percentage : ${percentage}%
+
+    `;
+
+
+
+    let circle =
+    document.getElementById(
+        "resultCircle"
+    );
+
+
+
+    circle.innerText =
+    percentage+"%";
+
+
+
+    let degree =
+    percentage * 3.6;
+
+
+
+    circle.style.background =
+
+    `
+    conic-gradient(
+
+    #22c55e ${degree}deg,
+
+    #1e293b ${degree}deg
+
+    )
+    `;
+
+
+}
