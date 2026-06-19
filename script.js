@@ -178,3 +178,63 @@ function startQuiz(){
     showQuestion();
 
 }
+function showQuestion(){
+
+
+    startTimer();
+
+
+    let question =
+    quizQuestions[currentQuestion];
+
+
+    questionText.innerText =
+    question.question;
+
+
+    currentQuestionNumber.innerText =
+    currentQuestion + 1;
+
+
+    progressBar.style.width =
+    (
+        (currentQuestion /
+        quizQuestions.length)
+        *100
+    )+"%";
+
+
+    optionsBox.innerHTML="";
+
+
+
+    question.options.forEach(function(option){
+
+
+        let button =
+        document.createElement("button");
+
+
+        button.innerText = option;
+
+
+        button.className =
+        "option-btn";
+
+
+        button.onclick=function(){
+
+            checkAnswer(
+                button,
+                option
+            );
+
+        };
+
+
+        optionsBox.appendChild(button);
+
+
+    });
+
+}
