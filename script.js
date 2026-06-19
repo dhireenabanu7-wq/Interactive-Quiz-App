@@ -366,3 +366,59 @@ nextBtn.addEventListener(
 
     }
 );
+function startTimer(){
+
+
+    clearInterval(timer);
+
+
+    time=15;
+
+
+    timerText.innerText=time;
+
+
+    timer=setInterval(function(){
+
+
+        time--;
+
+
+        timerText.innerText=time;
+
+
+        if(time<=0){
+
+
+            clearInterval(timer);
+
+
+            wrongAnswers++;
+
+
+            updateScore();
+
+
+            currentQuestion++;
+
+
+            if(
+            currentQuestion <
+            quizQuestions.length
+            ){
+
+                showQuestion();
+
+            }
+            else{
+
+                showResult();
+
+            }
+
+        }
+
+
+    },1000);
+
+}
