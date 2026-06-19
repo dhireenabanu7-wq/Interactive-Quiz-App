@@ -649,3 +649,73 @@ list.appendChild(li);
 
 
 displayLeaderboard();
+// ===============================
+// THEME TOGGLE
+// ===============================
+
+
+const themeButton =
+document.getElementById(
+"themeBtn"
+);
+
+
+
+let savedTheme =
+localStorage.getItem(
+"theme"
+);
+
+
+
+if(savedTheme==="light"){
+
+
+document.body.classList.add(
+"light-mode"
+);
+
+
+}
+
+
+
+themeButton.addEventListener(
+"click",
+function(){
+
+
+document.body.classList.toggle(
+"light-mode"
+);
+
+
+
+if(
+document.body.classList.contains(
+"light-mode"
+)
+){
+
+
+localStorage.setItem(
+"theme",
+"light"
+);
+
+
+}
+else{
+
+
+localStorage.setItem(
+"theme",
+"dark"
+);
+
+
+}
+
+
+
+});
