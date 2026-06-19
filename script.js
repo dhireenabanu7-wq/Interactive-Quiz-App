@@ -110,3 +110,71 @@ document.getElementById("currentQuestion");
 
 const totalQuestionNumber =
 document.getElementById("totalQuestions");
+startBtn.addEventListener(
+    "click",
+    startQuiz
+);
+
+
+function startQuiz(){
+
+    let selectedCategory =
+    document.getElementById("category").value;
+
+
+    let selectedDifficulty =
+    document.getElementById("difficulty").value;
+
+
+
+    quizQuestions =
+    questions.filter(function(question){
+
+
+        let categoryMatch =
+        selectedCategory === "all" ||
+        question.category === selectedCategory;
+
+
+        let difficultyMatch =
+        question.difficulty === selectedDifficulty;
+
+
+        return categoryMatch &&
+        difficultyMatch;
+
+
+    });
+
+
+
+    if(quizQuestions.length === 0){
+
+        alert("No Questions Found");
+
+        return;
+
+    }
+
+
+    currentQuestion = 0;
+
+    score = 0;
+
+    correctAnswers = 0;
+
+    wrongAnswers = 0;
+
+
+    quizBox.style.display="block";
+
+    resultBox.style.display="none";
+
+
+    totalQuestionNumber.innerText =
+    quizQuestions.length;
+
+
+    showQuestion();
+
+}
