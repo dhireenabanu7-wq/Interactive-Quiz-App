@@ -796,3 +796,23 @@ function saveHighScore(){
     }
 
 }
+// ===============================
+// KEYBOARD SHORTCUT
+// ===============================
+
+
+document.addEventListener(
+"keydown",
+function(event){
+
+
+    if(event.key === "Enter"){
+
+
+        nextBtn.click();
+
+
+    }
+
+
+});
