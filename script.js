@@ -521,3 +521,66 @@ function(){
     location.reload();
 
 });
+// ===============================
+// LEADERBOARD
+// ===============================
+
+
+function saveLeaderboard(
+score,
+percentage
+){
+
+
+let leaderboard =
+
+JSON.parse(
+localStorage.getItem(
+"quizLeaderboard"
+)
+)
+||
+[];
+
+
+
+leaderboard.push({
+
+score:score,
+
+percentage:percentage,
+
+date:
+new Date()
+.toLocaleDateString()
+
+});
+
+
+
+leaderboard.sort(
+function(a,b){
+
+return b.score-a.score;
+
+});
+
+
+
+leaderboard =
+leaderboard.slice(0,5);
+
+
+
+localStorage.setItem(
+
+"quizLeaderboard",
+
+JSON.stringify(
+leaderboard
+)
+
+);
+
+
+}
