@@ -300,3 +300,44 @@ function checkAnswer(
 
 
 }
+function updateScore(){
+
+
+    document.getElementById(
+        "scoreCard"
+    ).innerText = score;
+
+
+    document.getElementById(
+        "correctCard"
+    ).innerText = correctAnswers;
+
+
+    document.getElementById(
+        "wrongCard"
+    ).innerText = wrongAnswers;
+
+
+    let total =
+    correctAnswers + wrongAnswers;
+
+
+    let accuracy = 0;
+
+
+    if(total > 0){
+
+        accuracy =
+        Math.round(
+            (correctAnswers/total)*100
+        );
+
+    }
+
+
+    document.getElementById(
+        "accuracyCard"
+    ).innerText =
+    accuracy+"%";
+
+}
