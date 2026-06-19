@@ -141,3 +141,10 @@ background:#22c55e;
 color:white;
 cursor:pointer;
 }
+.quiz-section{
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(20px);
+padding:30px;
+border-radius:25px;
+display:none;
+}
