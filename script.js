@@ -45,6 +45,246 @@ const questions = [
         answer: "Document Object Model"
     }
 
+      // ================= HTML =================
+
+    {
+        category: "html",
+        difficulty: "easy",
+        question: "What does HTML stand for?",
+        options: [
+            "Hyper Text Markup Language",
+            "High Text Machine Language",
+            "Hyper Transfer Markup Language",
+            "Home Tool Markup Language"
+        ],
+        answer: "Hyper Text Markup Language"
+    },
+
+    {
+        category: "html",
+        difficulty: "easy",
+        question: "Which tag is used for paragraph?",
+        options: ["<p>", "<h1>", "<div>", "<span>"],
+        answer: "<p>"
+    },
+
+    {
+        category: "html",
+        difficulty: "easy",
+        question: "Which tag creates a hyperlink?",
+        options: ["<a>", "<link>", "<href>", "<url>"],
+        answer: "<a>"
+    },
+
+    {
+        category: "html",
+        difficulty: "medium",
+        question: "Which attribute is used for image source?",
+        options: ["src", "href", "link", "path"],
+        answer: "src"
+    },
+
+    {
+        category: "html",
+        difficulty: "medium",
+        question: "Semantic tag for navigation?",
+        options: ["<nav>", "<div>", "<span>", "<section>"],
+        answer: "<nav>"
+    },
+
+    {
+        category: "html",
+        difficulty: "medium",
+        question: "Which tag is used for table row?",
+        options: ["<tr>", "<td>", "<th>", "<table>"],
+        answer: "<tr>"
+    },
+
+    {
+        category: "html",
+        difficulty: "hard",
+        question: "Which tag is used for form input?",
+        options: ["<input>", "<form>", "<label>", "<textarea>"],
+        answer: "<input>"
+    },
+
+    {
+        category: "html",
+        difficulty: "hard",
+        question: "What is the use of meta tag?",
+        options: [
+            "SEO and metadata",
+            "Styling page",
+            "Creating buttons",
+            "Database connection"
+        ],
+        answer: "SEO and metadata"
+    },
+
+
+    // ================= CSS =================
+
+    {
+        category: "css",
+        difficulty: "easy",
+        question: "What does CSS stand for?",
+        options: [
+            "Cascading Style Sheets",
+            "Computer Style System",
+            "Creative Style Sheets",
+            "Color Style Syntax"
+        ],
+        answer: "Cascading Style Sheets"
+    },
+
+    {
+        category: "css",
+        difficulty: "easy",
+        question: "Which property changes text color?",
+        options: ["color", "text-color", "font-color", "style"],
+        answer: "color"
+    },
+
+    {
+        category: "css",
+        difficulty: "easy",
+        question: "Which property controls spacing inside element?",
+        options: ["padding", "margin", "spacing", "border"],
+        answer: "padding"
+    },
+
+    {
+        category: "css",
+        difficulty: "medium",
+        question: "Which system is one-dimensional layout?",
+        options: ["Flexbox", "Grid", "Table", "Block"],
+        answer: "Flexbox"
+    },
+
+    {
+        category: "css",
+        difficulty: "medium",
+        question: "Which property is used for background color?",
+        options: ["background-color", "color", "bgcolor", "background-style"],
+        answer: "background-color"
+    },
+
+    {
+        category: "css",
+        difficulty: "medium",
+        question: "Which unit is relative in CSS?",
+        options: ["em", "px", "cm", "mm"],
+        answer: "em"
+    },
+
+    {
+        category: "css",
+        difficulty: "hard",
+        question: "Which CSS property creates animation?",
+        options: ["animation", "transform", "transition", "motion"],
+        answer: "animation"
+    },
+
+    {
+        category: "css",
+        difficulty: "hard",
+        question: "Which layout uses rows and columns?",
+        options: ["Grid", "Flexbox", "Float", "Position"],
+        answer: "Grid"
+    },
+
+
+    // ================= JAVASCRIPT =================
+
+    {
+        category: "js",
+        difficulty: "easy",
+        question: "What is DOM?",
+        options: [
+            "Document Object Model",
+            "Data Object Model",
+            "Digital Output Model",
+            "None"
+        ],
+        answer: "Document Object Model"
+    },
+
+    {
+        category: "js",
+        difficulty: "easy",
+        question: "Which symbol is used for comments?",
+        options: ["//", "<!-- -->", "#", "**"],
+        answer: "//"
+    },
+
+    {
+        category: "js",
+        difficulty: "easy",
+        question: "Which keyword declares variable?",
+        options: ["let", "define", "varr", "int"],
+        answer: "let"
+    },
+
+    {
+        category: "js",
+        difficulty: "medium",
+        question: "What is an array?",
+        options: [
+            "Collection of items",
+            "Single variable",
+            "Function",
+            "Object only"
+        ],
+        answer: "Collection of items"
+    },
+
+    {
+        category: "js",
+        difficulty: "medium",
+        question: "Which method adds element in array?",
+        options: ["push()", "pop()", "shift()", "slice()"],
+        answer: "push()"
+    },
+
+    {
+        category: "js",
+        difficulty: "medium",
+        question: "What is a function?",
+        options: [
+            "Reusable block of code",
+            "Variable",
+            "Loop",
+            "Object"
+        ],
+        answer: "Reusable block of code"
+    },
+
+    {
+        category: "js",
+        difficulty: "hard",
+        question: "What is closure?",
+        options: [
+            "Function with outer scope access",
+            "CSS feature",
+            "Loop type",
+            "Array method"
+        ],
+        answer: "Function with outer scope access"
+    },
+
+    {
+        category: "js",
+        difficulty: "hard",
+        question: "What is async/await used for?",
+        options: [
+            "Handle asynchronous code",
+            "Styling",
+            "Looping",
+            "DOM creation"
+        ],
+        answer: "Handle asynchronous code"
+    }
+
 ];
 
 
