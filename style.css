@@ -119,3 +119,25 @@ margin-bottom:10px;
 font-size:2rem;
 color:#38bdf8;
 }
+.settings{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+margin-bottom:25px;
+}
+
+
+.settings select,
+.settings button{
+padding:12px 20px;
+border:none;
+border-radius:12px;
+font-size:1rem;
+}
+
+
+.settings button{
+background:#22c55e;
+color:white;
+cursor:pointer;
+}
