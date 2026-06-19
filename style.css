@@ -246,3 +246,29 @@ display:none;
 text-align:center;
 margin-top:40px;
 }
+.leaderboard{
+margin-top:40px;
+background:rgba(255,255,255,.08);
+padding:25px;
+border-radius:20px;
+}
+
+
+.leaderboard h2{
+margin-bottom:20px;
+}
+
+
+.leaderboard li{
+list-style:none;
+padding:12px;
+margin-bottom:10px;
+background:#1e293b;
+border-radius:10px;
+}
+
+
+.light-mode{
+background:#f8fafc;
+color:#111827;
+}
